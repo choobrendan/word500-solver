@@ -11,8 +11,8 @@
   }
   
   .tile {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +24,8 @@
   
   @media (max-width: 720px) {
     .tile {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       font-size: 25px;
     }
   
@@ -36,8 +36,8 @@
 
   @media (max-width: 480px) {
     .tile {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
       font-size: 20px;
     }
   
@@ -55,17 +55,25 @@
     background-color: yellow;
   }
   .tile:nth-child(8) {
-    background-color: red;
+    background-color: rgb(255, 72, 72);
   }
   .reset-button{
     width: 100%;
 
   }
-  button{
-    width: 200px;
-    margin: 10px;
-    background-color: aqua;
+.reset{
+    width: 110px;
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .keyboards{
+        width: 40px;
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
     height: 40px;
     font-size: 20px;
-    border: ;
+  
   }

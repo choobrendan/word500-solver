@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import words from './words.txt';
+
 
 const compareWords = (actualWord, guessedWord) => {
     let green = 0;
@@ -34,20 +34,12 @@ const compareWords = (actualWord, guessedWord) => {
     return { green, yellow, red };
 };
 
-const Answers = ({ guess }) => {
-    const [inputs, setInputs] = useState([]);
+const Answers = ({ guess, inputs }) => {
+
     const [possibleWords, setPossibleWords] = useState([]);
 
-    useEffect(() => {
-        fetch(words)
-            .then((r) => r.text())
-            .then(text => {
-                const wordList = text.split("\n");
-                setInputs(wordList); 
-            })
-            .catch(error => console.error('Error fetching words:', error));
-    }, []); // Run only once when the component mounts
-
+    inputs=inputs.map(x => x.toLowerCase())
+    console.log(inputs)
     const guesses = guess.map(item => {
         const mergedLetters = item.slice(0, 5).join('').toLowerCase(); 
         const numbers = item.slice(5); // Get the remaining numbers (g, y, r)
