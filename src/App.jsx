@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App" tabIndex={0} onKeyDown={handleKeyDown}>
       <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-      <p style={{ fontSize: '36px', fontWeight: "bold", marginBottom:"10px",marginTop:"10px" }}>Word500 Solver</p>
+      <p style={{ fontSize: '30px', fontWeight: "bold", marginBottom:"10px",marginTop:"10px" }}>Word500 Solver</p>
 
       {/* Difficulty Selector */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginLeft: '20px' }}>

@@ -21,7 +21,22 @@
     border: 2px solid #000;
     text-transform: uppercase;
   }
+  .reset{
+    width: 110px;
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .keyboards{
+        width: 40px;
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 20px;
   
+  }
   @media (max-width: 720px) {
     .tile {
       width: 40px;
@@ -34,7 +49,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     .tile {
       width: 30px;
       height: 30px;
@@ -44,6 +59,22 @@
     .row {
       gap: 3px;
     }
+    .reset{
+        width: 80px;
+        margin: 2px;
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .keyboards{
+            width: 28px;
+        margin: 2px;
+        background-color: rgb(255, 255, 255);
+        height: 28px;
+        font-size: 15px;
+      
+      }
   }
   
 
@@ -60,20 +91,4 @@
   .reset-button{
     width: 100%;
 
-  }
-.reset{
-    width: 110px;
-    margin: 2px;
-    background-color: rgb(255, 255, 255);
-    height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .keyboards{
-        width: 40px;
-    margin: 2px;
-    background-color: rgb(255, 255, 255);
-    height: 40px;
-    font-size: 20px;
-  
   }
