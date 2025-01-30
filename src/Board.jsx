@@ -49,18 +49,55 @@ function Board() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [board, currentRow, currentCol]);
+
+  // Touch event handler for mobile support
+  const handleTileTouch = (rowIndex, colIndex) => {
+    if (currentRow === rowIndex && currentCol === colIndex) return; // Prevent focusing if it's the same tile
+    setCurrentRow(rowIndex);
+    setCurrentCol(colIndex);
+  };
+
+  // Reset the entire board to initial state
+  const resetBoard = () => {
+    setBoard(Array(8).fill('').map(() => Array(8).fill('')));
+    setCurrentRow(0);
+    setCurrentCol(0);
+  };
+
+  // Reset only the current row
+  const resetRow = () => {
+    const newBoard = [...board];
+    newBoard[currentRow] = Array(8).fill('');  // Reset the current row
+    setBoard(newBoard);
+    setCurrentCol(0);  // Reset column to the first one
+  };
+
   return (
-    <div className="">
+    <div className="board-container">
       <div className="board">
         {board.map((row, i) => (
           <div key={i} className="row">
             {row.map((tile, j) => (
-              <div key={j} className="tile">{tile}</div>
+              <div 
+                key={j} 
+                className="tile" 
+                onClick={() => handleTileTouch(i, j)} 
+                role="button"
+              >
+                {tile}
+              </div>
             ))}
           </div>
         ))}
+              <div className="reset-buttons">
+        <button onClick={resetBoard}>Reset All</button>
+        <button onClick={resetRow}>Reset Row</button>
       </div>
+      </div>
+
       <Answers guess={board} />
+
+
     </div>
   );
 }

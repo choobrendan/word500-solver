@@ -3,9 +3,8 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
-  
   .row {
     display: flex;
     gap: 5px;
@@ -22,6 +21,31 @@
     border: 2px solid #000;
     text-transform: uppercase;
   }
+  
+  @media (max-width: 720px) {
+    .tile {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+    }
+  
+    .row {
+      gap: 4px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tile {
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+    }
+  
+    .row {
+      gap: 3px;
+    }
+  }
+  
 
   .tile:nth-child(6) {
     background-color: lightgreen;
@@ -32,4 +56,16 @@
   }
   .tile:nth-child(8) {
     background-color: red;
+  }
+  .reset-button{
+    width: 100%;
+
+  }
+  button{
+    width: 200px;
+    margin: 10px;
+    background-color: aqua;
+    height: 40px;
+    font-size: 20px;
+    border: ;
   }

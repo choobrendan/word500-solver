@@ -19,7 +19,7 @@ function App() {
     <div className="App" tabIndex={0} onKeyDown={handleKeyDown}>
       <header className="App-header">
         <p style={{
-          fontSize: '36px', fontWeight: "bold"
+          fontSize: '36px', fontWeight: "bold", marginBottom: "10px"
         }} >Word500 Solver</p>
         <Board guess={guess} setGuess={setGuess} />
       </header>
