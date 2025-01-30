@@ -1,0 +1,35 @@
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .tile {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #000;
+    text-transform: uppercase;
+  }
+
+  .tile:nth-child(6) {
+    background-color: lightgreen;
+  }
+  
+  .tile:nth-child(7) {
+    background-color: yellow;
+  }
+  .tile:nth-child(8) {
+    background-color: red;
+  }
