@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/word500-solver/static/css/main.980f04d7.css",
+    "main.js": "/word500-solver/static/js/main.5a4cd687.js",
+    "static/js/488.583ec563.chunk.js": "/word500-solver/static/js/488.583ec563.chunk.js",
+    "static/media/words.txt": "/word500-solver/static/media/words.025cda3fd48f375c0f8c.txt",
+    "index.html": "/word500-solver/index.html",
+    "main.980f04d7.css.map": "/word500-solver/static/css/main.980f04d7.css.map",
+    "main.5a4cd687.js.map": "/word500-solver/static/js/main.5a4cd687.js.map",
+    "488.583ec563.chunk.js.map": "/word500-solver/static/js/488.583ec563.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.980f04d7.css",
+    "static/js/main.5a4cd687.js"
+  ]
+}
