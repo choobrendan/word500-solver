@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Board.css";
 import Answers from "./Answers";
 
@@ -6,10 +6,11 @@ function Board() {
   const [board, setBoard] = useState(Array(8).fill('').map(() => Array(8).fill('')));
   const [currentRow, setCurrentRow] = useState(0);
   const [currentCol, setCurrentCol] = useState(0);
+  const inputRef = useRef(null); // Ref for the hidden input
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (currentRow >= 8) return; // Prevent input after 6 rows
+      if (currentRow >= 8) return; // Prevent input after 8 rows
 
       const key = event.key;
       // Check for input restrictions
@@ -55,6 +56,7 @@ function Board() {
     if (currentRow === rowIndex && currentCol === colIndex) return; // Prevent focusing if it's the same tile
     setCurrentRow(rowIndex);
     setCurrentCol(colIndex);
+    inputRef.current.focus(); // Focus the hidden input to trigger the keyboard
   };
 
   // Reset the entire board to initial state
@@ -67,21 +69,29 @@ function Board() {
   // Reset only the current row
   const resetRow = () => {
     const newBoard = [...board];
-    newBoard[currentRow] = Array(8).fill('');  // Reset the current row
+    newBoard[currentRow] = Array(8).fill(''); // Reset the current row
     setBoard(newBoard);
-    setCurrentCol(0);  // Reset column to the first one
+    setCurrentCol(0); // Reset column to the first one
   };
 
   return (
     <div className="board-container">
+      {/* Hidden input to trigger mobile keyboard */}
+      <input
+        ref={inputRef}
+        type="text"
+        style={{ position: "absolute", top: "-1000px" }} // Hide the input off-screen
+        onBlur={() => inputRef.current.focus()} // Keep the input focused
+      />
+
       <div className="board">
         {board.map((row, i) => (
           <div key={i} className="row">
             {row.map((tile, j) => (
-              <div 
-                key={j} 
-                className="tile" 
-                onClick={() => handleTileTouch(i, j)} 
+              <div
+                key={j}
+                className="tile"
+                onClick={() => handleTileTouch(i, j)}
                 role="button"
               >
                 {tile}
@@ -89,15 +99,14 @@ function Board() {
             ))}
           </div>
         ))}
-              <div className="reset-buttons">
+      </div>
+
+      <div className="reset-buttons">
         <button onClick={resetBoard}>Reset All</button>
         <button onClick={resetRow}>Reset Row</button>
       </div>
-      </div>
 
       <Answers guess={board} />
-
-
     </div>
   );
 }
