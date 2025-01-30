@@ -56,7 +56,7 @@ function Board() {
     if (currentRow === rowIndex && currentCol === colIndex) return; // Prevent focusing if it's the same tile
     setCurrentRow(rowIndex);
     setCurrentCol(colIndex);
-    inputRef.current.focus(); // Focus the hidden input to trigger the keyboard
+    setTimeout(() => inputRef.current.focus(), 100); // Focus with delay
   };
 
   // Reset the entire board to initial state
@@ -81,6 +81,7 @@ function Board() {
         ref={inputRef}
         type="text"
         style={{ position: "absolute", top: "-1000px" }} // Hide the input off-screen
+        value={board[currentRow][currentCol]} // Ensure input value is tied to state
         onBlur={() => inputRef.current.focus()} // Keep the input focused
       />
 
