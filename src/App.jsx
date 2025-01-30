@@ -4,7 +4,7 @@ import Board from "./Board"
 
 
 function App() {
-  
+
   const [guess, setGuess] = useState('');
 
   const handleKeyDown = (event) => {
@@ -18,7 +18,9 @@ function App() {
   return (
     <div className="App" tabIndex={0} onKeyDown={handleKeyDown}>
       <header className="App-header">
-        <h1>Wordle Board</h1>
+        <p style={{
+          fontSize: '36px', fontWeight: "bold"
+        }} >Word500 Solver</p>
         <Board guess={guess} setGuess={setGuess} />
       </header>
     </div>
