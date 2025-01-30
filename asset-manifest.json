@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/word500-solver/static/css/main.ef9d8a6a.css",
-    "main.js": "/word500-solver/static/js/main.5f5244d8.js",
+    "main.css": "/word500-solver/static/css/main.d5cc66c5.css",
+    "main.js": "/word500-solver/static/js/main.8aa0cd0b.js",
     "static/js/488.583ec563.chunk.js": "/word500-solver/static/js/488.583ec563.chunk.js",
     "static/media/words.txt": "/word500-solver/static/media/words.be55693edd15ffec4194.txt",
     "index.html": "/word500-solver/index.html",
-    "main.ef9d8a6a.css.map": "/word500-solver/static/css/main.ef9d8a6a.css.map",
-    "main.5f5244d8.js.map": "/word500-solver/static/js/main.5f5244d8.js.map",
+    "main.d5cc66c5.css.map": "/word500-solver/static/css/main.d5cc66c5.css.map",
+    "main.8aa0cd0b.js.map": "/word500-solver/static/js/main.8aa0cd0b.js.map",
     "488.583ec563.chunk.js.map": "/word500-solver/static/js/488.583ec563.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef9d8a6a.css",
-    "static/js/main.5f5244d8.js"
+    "static/css/main.d5cc66c5.css",
+    "static/js/main.8aa0cd0b.js"
   ]
 }
